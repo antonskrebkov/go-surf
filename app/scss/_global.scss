@@ -1,0 +1,237 @@
+@import "vars";
+
+html {
+   box-sizing: border-box;
+}
+
+*, *::before, *::after {
+   box-sizing: inherit;
+   font-family: 'Fira Sans', sans-serif;
+   font-weight: 400;
+}
+
+body {
+   font-size: 16px;
+   line-height: 19px;
+   background-color: #171919;
+   color: #fff;
+   min-width: 320px;
+   overflow-x: hidden;
+}
+
+ul,li {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+a {
+   color: #fff;
+   text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+   margin: 0;
+}
+
+.container {
+   max-width: 1920px;
+   margin: 0 auto;
+}
+
+.headline-left {
+   font-size: 22px;
+   line-height: 32px;
+   text-align: right;
+   letter-spacing: 7.33333px;
+   text-transform: uppercase;
+   opacity: 0.5;
+   padding-left: 103px;
+   display: inline-block;
+   position: relative;
+   &::before {
+      content: "";
+      width: 80px;
+      height: 1px;
+      left: 0;
+      top: 50%;
+      background-color: rgba(#fff, 0.5);
+      position: absolute;
+   }
+}
+
+.title {
+   text-transform: uppercase;
+   span {
+      display: inline-block;
+      font-weight: 800;
+      line-height: 200px;
+      font-size: 200px;
+      color: rgba(#fff, .02);
+      position: relative;
+      transform: translateX(-50px);
+   }
+   h3 {
+      font-weight: 800;
+      font-size: 80px;
+      line-height: 85px;
+      color: #fff;
+      position: absolute;
+      top: 0;
+      right: -20px;
+      &::after {
+         content: "";
+         width: 80px;
+         height: 1px;
+         position: absolute;
+         background-color: $green;
+         top: 0;
+         right: 0;
+      }
+   }
+}
+
+.subtitle {
+   display: inline-block;
+   text-align: right;
+   text-transform: uppercase;
+   &__head {
+      padding-right: 7.3px;
+      font-weight: 800;
+      font-size: 40px;
+      line-height: 60px;
+      span {
+         font-weight: 200;
+      }
+   }
+}
+
+.descr {
+   display: inline-block;
+   text-transform: uppercase;
+   &__head {
+      font-weight: 800;
+      font-size: 40px;
+      line-height: 60px;
+      span {
+         font-weight: 200;
+      }
+   }
+}
+
+.headline-right {
+   font-size: 22px;
+   line-height: 32px;
+   letter-spacing: 7.33333px;
+   text-transform: uppercase;
+   opacity: 0.5;
+   padding-right: 103px;
+   display: inline-block;
+   position: relative;
+   &::after {
+      content: "";
+      width: 80px;
+      height: 1px;
+      right: 0;
+      top: 50%;
+      background-color: rgba(#fff, 0.5);
+      position: absolute;
+   }
+}
+
+.btn {
+      text-transform: uppercase;
+      font-weight: 800;
+      font-size: 40px;
+      line-height: 36px;
+      outline: none;
+      span {
+         position: relative;
+         font-weight: 800;
+         padding: 26px 57px 26px 17px;
+         background-color: $green;
+         display: inline-block;
+         margin-left: 10px;
+         &::before {
+            content: "";
+            width: 20px;
+            height: 1px;
+            position: absolute;
+            background-color: #fff;
+            top: 50%;
+            left: -10px;
+         }
+         &::after {
+            content: "";
+            position: absolute;
+            background-image: url('../images/arrow-right.svg');
+            background-size: cover;
+            background-position: center;
+            width: 25px;
+            height: 21px;
+            right: 17px;
+            transform: translateY(37%);
+         }
+      }
+}
+ 
+ input[type=number]::-webkit-inner-spin-button,
+ input[type=number]::-webkit-outer-spin-button
+ {
+   -webkit-appearance: none;
+   margin: 0;
+ }
+ 
+ input[type=number]
+ {
+   -moz-appearance: textfield;
+ }
+ 
+ .quantity input {
+   height: 40px;
+   font-family: 'Fira Sans', sans-serif;
+   color: #fff;
+   background-color: transparent;
+   font-weight: 800;
+   font-size: 40px;
+   line-height: 40px;
+   float: left;
+   padding: 0;
+   margin: 0;
+   border: none;
+ }
+ 
+ .quantity input:focus {
+   outline: 0;
+ }
+ 
+ .quantity-nav {
+   float: left;
+   position: static;
+   height: 42px;
+ }
+ 
+ .quantity-button {
+   position: relative;
+   display: flex;
+   cursor: pointer;
+   width: 14px;
+   height: 14px;
+   transform: translateX(-100%);
+   user-select: none;
+   top: 50px;
+ }
+ 
+ .quantity-button.quantity-up {
+   position: absolute;
+   right: 57px;
+ }
+ 
+ .quantity-button.quantity-down {
+   position: absolute;
+   right: 82px;
+ }
+
+ .letter-spacing {
+   letter-spacing: 6px;
+ }
